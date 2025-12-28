@@ -31,7 +31,7 @@ export const About: React.FC = () => {
       year: "Sept 2025 - Present",
       role: "Software Engineer",
       company: "Senyum Cerdas Indonesia",
-      desc: "Developing and designing the Learning Management System (LMS) frontend and UI/UX, as well as validating training data results."
+      desc: "Developing and designing the Learning Management System (LMS), as well as validating training data results."
     },
     {
       year: "Sept 2024 - Dec 2024",
