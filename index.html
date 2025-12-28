@@ -1,92 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nawal Rizky | Creative Developer</title>
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="description" content="Portfolio of Nawal Rizky, a Full Stack Developer specializing in building scalable web applications and digital solutions." />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              display: ['Space Grotesk', 'sans-serif'],
-            },
-            colors: {
-              brand: {
-                orange: '#FF5722', // Vibrant orange from reference
-                dark: '#0a0a0a',
-                gray: '#1f1f1f',
-              }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nawal Rizky | Full Stack Developer</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="description"
+    content="Portfolio of Nawal Rizky, a Full Stack Developer specializing in building scalable web applications and digital solutions." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              orange: '#FF5722', // Vibrant orange from reference
+              dark: '#0a0a0a',
+              gray: '#1f1f1f',
             }
           }
         }
       }
-    </script>
-    <style>
-      body {
-        background-color: #050505;
-        color: #ffffff;
-        overflow-x: hidden;
-      }
-      /* Hide scrollbar for cleaner look */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0a0a0a; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #333; 
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #FF5722; 
-      }
-      /* Hero Section Responsive Background Images */
+    }
+  </script>
+  <style>
+    body {
+      background-color: #050505;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* Hide scrollbar for cleaner look */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0a0a0a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF5722;
+    }
+
+    /* Hero Section Responsive Background Images */
+    .hero-section-bg {
+      background-image: url(/images/hero_mobile_image.png);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
       .hero-section-bg {
-        background-image: url(/images/hero_mobile_image.png);
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
+        background-image: url(/images/hero_image.png);
+        background-size: 130%;
       }
-      @media (min-width: 768px) and (max-width: 1023px) {
-        .hero-section-bg {
-          background-image: url(/images/hero_image.png);
-          background-size: 130%;
-        }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-section-bg {
+        background-image: url(/images/hero_image.png);
+        background-size: 150%;
       }
-      @media (min-width: 1024px) {
-        .hero-section-bg {
-          background-image: url(/images/hero_image.png);
-          background-size: 150%;
-        }
+    }
+
+    /* Button Glow Animation */
+    @keyframes pulse-glow {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.4);
+        transform: scale(1);
       }
-      /* Button Glow Animation */
-      @keyframes pulse-glow {
-        0% {
-          box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.4);
-          transform: scale(1);
-        }
-        50% {
-          box-shadow: 0 0 0 15px rgba(255, 87, 34, 0);
-          transform: scale(1.05);
-        }
-        100% {
-          box-shadow: 0 0 0 0 rgba(255, 87, 34, 0);
-          transform: scale(1);
-        }
+
+      50% {
+        box-shadow: 0 0 0 15px rgba(255, 87, 34, 0);
+        transform: scale(1.05);
       }
-      .btn-glow-animate {
-        animation: pulse-glow 2s infinite;
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 87, 34, 0);
+        transform: scale(1);
       }
-    </style>
+    }
+
+    .btn-glow-animate {
+      animation: pulse-glow 2s infinite;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -100,10 +115,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
+
+<body>
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
