@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
@@ -21,7 +21,7 @@ import { ContactModal } from './components/ContactModal';
 const App: React.FC = () => {
   return (
     <ContactProvider>
-      <HashRouter>
+      <BrowserRouter>
         <div className="bg-brand-dark min-h-screen text-white font-sans selection:bg-brand-orange selection:text-white">
           <ScrollToTop />
           <Navbar />
@@ -38,7 +38,7 @@ const App: React.FC = () => {
           <Footer />
           <ContactModal />
         </div>
-      </HashRouter>
+      </BrowserRouter>
     </ContactProvider>
   );
 };
