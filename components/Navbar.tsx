@@ -153,54 +153,37 @@ export const Navbar: React.FC = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay - Outside nav to avoid z-index conflicts */}
-      {isOpen && (
-        <>
-          {/* Backdrop - Fixed to viewport, not affected by scroll */}
-          <div
-            className="fixed inset-0 bg-black z-[200] md:hidden"
-            onClick={() => setIsOpen(false)}
-            style={{
-              backgroundColor: '#0a0a0a',
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0
-            }}
-          />
+      {/* Mobile Menu Overlay */}
+      {/* Backdrop */}
+      <div
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[200] md:hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
+        onClick={() => setIsOpen(false)}
+      />
 
-          {/* Menu Content */}
-          <div
-            className="fixed inset-0 z-[201] flex flex-col items-center justify-center gap-8 md:hidden"
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0
-            }}
+      {/* Menu Content - Slides in from right */}
+      <div
+        className={`fixed inset-0 z-[201] flex flex-col items-center justify-center gap-8 md:hidden bg-brand-dark transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+      >
+        {navLinks.map((link) => (
+          <NavLink
+            key={link.name}
+            to={link.path}
+            className="text-3xl font-display font-bold text-white hover:text-brand-orange transition-colors"
+            onClick={() => setIsOpen(false)}
           >
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.name}
-                to={link.path}
-                className="text-3xl font-display font-bold text-white hover:text-brand-orange transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </NavLink>
-            ))}
-            <button
-              className="absolute top-6 right-6 text-white hover:text-brand-orange transition-colors z-[202]"
-              onClick={() => setIsOpen(false)}
-              aria-label="Close menu"
-            >
-              <X size={32} />
-            </button>
-          </div>
-        </>
-      )}
+            {link.name}
+          </NavLink>
+        ))}
+        <button
+          className="absolute top-6 right-6 text-white hover:text-brand-orange transition-colors z-[202]"
+          onClick={() => setIsOpen(false)}
+          aria-label="Close menu"
+        >
+          <X size={32} />
+        </button>
+      </div>
     </>
   );
 };
