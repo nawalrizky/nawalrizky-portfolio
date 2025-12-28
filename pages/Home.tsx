@@ -237,7 +237,7 @@ export const Home: React.FC = () => {
             Let's build something <br />
             <span className="text-brand-orange">Amazing.</span>
           </h2>
-          <Button className="h-16 px-10 text-lg" onClick={openContact}>Start a Project</Button>
+          <Button className="h-16 px-10 text-lg btn-glow-animate" onClick={openContact}>Start a Project</Button>
         </div>
       </section>
 

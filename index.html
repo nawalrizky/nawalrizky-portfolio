@@ -68,6 +68,24 @@
           background-size: 150%;
         }
       }
+      /* Button Glow Animation */
+      @keyframes pulse-glow {
+        0% {
+          box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.4);
+          transform: scale(1);
+        }
+        50% {
+          box-shadow: 0 0 0 15px rgba(255, 87, 34, 0);
+          transform: scale(1.05);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(255, 87, 34, 0);
+          transform: scale(1);
+        }
+      }
+      .btn-glow-animate {
+        animation: pulse-glow 2s infinite;
+      }
     </style>
   <script type="importmap">
 {
