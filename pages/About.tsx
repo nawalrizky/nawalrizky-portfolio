@@ -28,8 +28,8 @@ export const About: React.FC = () => {
 
   const timeline = [
     {
-      year: "Sept 2025 - Present",
-      role: "Software Engineer",
+      year: "Oct 2025 - Present",
+      role: "FullStack Developer",
       company: "Senyum Cerdas Indonesia",
       desc: "Developing and designing the Learning Management System (LMS), as well as validating training data results."
     },
